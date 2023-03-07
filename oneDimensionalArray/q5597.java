@@ -1,39 +1,27 @@
 package oneDimensionalArray;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.util.Scanner;
 
 public class q5597 {
-  public static void main(String[] args) throws IOException{
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    
-    int tmp;
-    int totalStudent = 30;
-    int submitStudent = 28;
-    int[] totalArr = new int[totalStudent];
-    int[] submitArr = new int[submitStudent];
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
 
-    for(int i = 0; i < submitStudent; i++){
-        submitArr[i] = Integer.parseInt(br.readLine());
+    int[] students = new int[30];
+
+    for(int i = 0; i < 30; i++){
+      students[i] = 0;
     }
 
-    for(int i = 0; i < submitStudent; i++){
-        for(int j = 1; j <= submitStudent; j++){
-            if(submitArr[i] > submitArr[j]){
-                tmp = submitArr[i];
-                submitArr[i] = submitArr[j];
-                submitArr[j] = tmp;
-            }
-        }
+    for(int j = 0; j < 28; j++){
+      int n = sc.nextInt();
+      students[n-1] = n;
     }
 
-    bw.write(String.valueOf(submitArr));
-    bw.flush();
-    bw.close();
+    for(int k = 0; k < 30; k++){
+      if(students[k] == 0){
+        System.out.println(k+1);
+      }
+    }
+  }
+}  
 
-  }  
-}
