@@ -1,1 +1,4 @@
 2023-10-21 19:22:43,041 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-10-30 21:26:36,603 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-10-30 21:27:51,136 [Worker-12: Auto share git projects] WARN  org.eclipse.jgit.util.FS_POSIX - Exception caught during execution of command '[bash, --login, -c, which git]' in '/Users/jinhwankim', return code '127', error message 'bash: which: command not found
+'
