@@ -33,18 +33,24 @@ public class q2444 {
         int N = sc.nextInt();
         int M = 2 * N - 1;
         int quotient = M / 2;
+        int k = 1;
         
         String star = "*";
-        String str = "";
+        String blank = " ";
         
-        for(int i = 0; i < quotient + 1; i++) {
-        	str = str + star;
+        for(int i = 1; i < quotient + 2; i++) {
+        	String str = "";
+        	str = blank.repeat(quotient + 1 - i) + str;
+        	str = str + star.repeat(2*i - 1);
         	System.out.println(str);
         }
-        
-        for(int j = quotient + 1; j < 0; j--) {
-        	str = str.substring(str.length()-1);
-        	System.out.println(str);
+        for(int j = quotient; j > 0; j--) {
+        	String str1 = "";
+        	str1 = blank.repeat(k) + str1;
+        	str1 = str1 + star.repeat(2*j - 1);
+        	System.out.println(str1);
+        	k++;
         }
+        
 	}
 }
