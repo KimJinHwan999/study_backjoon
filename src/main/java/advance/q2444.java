@@ -28,6 +28,8 @@ public class q2444 {
     	    *
     	*/
 
+		// java 11 ver
+		/*
         Scanner sc = new Scanner(System.in);
         
         int N = sc.nextInt();
@@ -51,6 +53,7 @@ public class q2444 {
         	System.out.println(str1);
         	k++;
         }
+        */
         
 	}
 }
